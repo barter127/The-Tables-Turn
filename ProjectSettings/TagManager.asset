@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PlayerHitbox
+  - PlayerAnimator
+  - Enemies
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Enemies
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: StopClipping
+    uniqueID: 4211061469
+    locked: 0
+  - name: Decoration
+    uniqueID: 694479363
+    locked: 0
+  - name: Shadow
+    uniqueID: 2161106873
+    locked: 0
+  - name: Characters
+    uniqueID: 2772434737
+    locked: 0
+  - name: Player
+    uniqueID: 2834760253
+    locked: 0
