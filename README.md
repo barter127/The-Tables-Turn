@@ -24,7 +24,10 @@
     <br />
     The project was nominated for an Access Award for "Best Game Developer/Development in 2024
     <br />
-    
+    <br />
+      <a href="https://github.com/barter127/The-Tables-Turn">
+    <img src="Access Awards Ss.png" alt="Logo" width="500" height="250">
+    <br />
     <a href="https://github.com/barter127/The-Tables-Turn/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
     <a href="https://github.com/barter127/The-Tables-Turn/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
@@ -33,14 +36,11 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
+<!-- ABOUT THE PROJECT --
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+>
 
 
 
