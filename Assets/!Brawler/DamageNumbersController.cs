@@ -3,7 +3,7 @@ using TMPro;
 
 public class DamageNumbesController : MonoBehaviour
 {
-    [SerializeField] private TMP_Text dmgText;
+    [SerializeField] private TextMeshProUGUI dmgText;
     [SerializeField] private NEWpunkAI ai;
     [SerializeField] private Animator animator;
 

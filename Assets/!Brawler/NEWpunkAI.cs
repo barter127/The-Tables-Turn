@@ -52,7 +52,7 @@ public class NEWpunkAI : MonoBehaviour
     private float fallTimer;
     public float getUpTimer;
     [SerializeField] private float getUpTimerLength;
-    public bool onGround;
+    [HideInInspector] public bool onGround;
     private float hurtTimer;
 
     public bool spotPlayer;
@@ -93,6 +93,8 @@ public class NEWpunkAI : MonoBehaviour
 
     void Update()
     {
+        playerCurrentAttack = playerComboSystem.currentAttack;
+
         //Calculate distance from player.
         distanceVector = transform.position - player.transform.position;
         distanceX = distanceVector.x;
@@ -284,13 +286,11 @@ public class NEWpunkAI : MonoBehaviour
                 playGetHitOnce = true;
                 animator.SetTrigger("GetHit");
 
-                StartCoroutine(ResetHIt());
+                StartCoroutine(ResetHit());
 
                 rb.velocity = Vector3.zero; //Freeze enemy after hit.
                 float blowbackForce = isFacingRight ? -playerCurrentAttack.enemyBlowbackForce : playerCurrentAttack.enemyBlowbackForce; //Changes blowback force depending on enemy direction.
                 rb.AddForce(blowbackForce, 0, 0);
-
-                Debug.Log("switch to move");
             }
         }
 
@@ -383,7 +383,7 @@ public class NEWpunkAI : MonoBehaviour
         Debug.Log("Hurt End");
     }
 
-    private IEnumerator ResetHIt()
+    private IEnumerator ResetHit()
     {
         yield return new WaitForSeconds(0.35f);
 

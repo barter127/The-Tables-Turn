@@ -340,7 +340,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3329536633315597442, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -822,7 +822,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3859381079598172351, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -1364,7 +1364,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3329536633315597442, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -1444,7 +1444,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 469882274}
   m_SourcePrefab: {fileID: 100100000, guid: 7d4f4a324550cd640af247dd3b7c24ef, type: 3}
 --- !u!1 &254790827
 GameObject:
@@ -1793,7 +1797,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3329536633315597442, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -1902,7 +1906,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3859381079598172351, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -1968,6 +1972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayerID
       value: -2133860423
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161178959178405411, guid: 7d4f4a324550cd640af247dd3b7c24ef,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4273327764335055160, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -2874,12 +2883,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &469882267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 247105457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &469882273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3859381079598172351, guid: 7d4f4a324550cd640af247dd3b7c24ef,
     type: 3}
   m_PrefabInstance: {fileID: 247105457}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &469882274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469882267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aaf5406b09c0c14ab5a5a614867f4b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &488563745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3312,7 +3339,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3329536633315597442, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -5261,7 +5288,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3329536633315597442, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -6299,7 +6326,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3859381079598172351, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -6513,7 +6540,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3329536633315597442, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -6899,7 +6926,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3329536633315597442, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -8296,7 +8323,7 @@ GameObject:
   - component: {fileID: 1720317924}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: Enemies
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8894,7 +8921,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3329536633315597442, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -10508,7 +10535,7 @@ PrefabInstance:
     - target: {fileID: 289993609848886545, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
       propertyPath: m_TagString
-      value: Enemies
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3329536633315597442, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}
@@ -10574,6 +10601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161178959178405411, guid: 7d4f4a324550cd640af247dd3b7c24ef,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemies
       objectReference: {fileID: 0}
     - target: {fileID: 4273327764335055160, guid: 7d4f4a324550cd640af247dd3b7c24ef,
         type: 3}

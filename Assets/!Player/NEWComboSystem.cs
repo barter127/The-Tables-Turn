@@ -6,8 +6,6 @@ public class NEWComboSystem : MonoBehaviour //Could use some optimisation but de
     public AttackScriptableObject[] lightAttacks;
     public AttackScriptableObject[] heavyAttacks;
     public AttackScriptableObject[] aerialAttacks;
-    //[SerializeField] private AttackScriptableObject[] runningAttacks;
-    //[SerializeField] private AttackScriptableObject[] grabAttacks;
     public AttackScriptableObject currentAttack;
 
     //Component References
@@ -26,7 +24,6 @@ public class NEWComboSystem : MonoBehaviour //Could use some optimisation but de
     public int comboAnimCounter;
     private float comboTimer;
     [SerializeField] private float comboTimerLength;
-    private bool startLightAttack;
 
     private float heavyTimer;
     private bool startHeavyAttack;
@@ -155,23 +152,4 @@ public class NEWComboSystem : MonoBehaviour //Could use some optimisation but de
 
         EndCombo();
     }
-
-    #region Running Attacks Code
-    //else if (pc.isRunning)
-    //{
-    //    animator.runtimeAnimatorController = runningAttacks[0].animatorOV;
-    //    animator.Play("Attack State", 0, 0);
-    //}
-
-    //            else if (pc.isRunning && !isAttacking)
-    //        {
-    //            animator.runtimeAnimatorController = runningAttacks[1].animatorOV;
-    //            animator.Play("Attack State", 0, 0);
-
-    //animator.SetBool("StartRoll", true);
-    //isAttacking = true;
-    //            pc.isRolling = true;
-    //            heavyTimer = heavyTimerLength;
-    //        }
-    #endregion
 }
