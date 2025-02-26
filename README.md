@@ -11,7 +11,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- Project Title -->
-<br />
 <div align="center">
 
 <h1 align="center">The Tables Turn</h1>
