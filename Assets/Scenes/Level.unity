@@ -5403,7 +5403,7 @@ MonoBehaviour:
   enemyIsAttacking: 0
   endGameText: {fileID: 180915554}
   cam: {fileID: 69156036}
-  enemyWaveNumber: 02000000040000000600000001000000
+  enemyWaveNumber: 020000000400000006000000
   currentWave: 0
 --- !u!4 &975906008
 Transform:

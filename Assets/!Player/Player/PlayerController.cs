@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private NEWComboSystem combo;
     [SerializeField] private HealthBar healthBar;
-    [SerializeField] private LogicManager lm;
+    [SerializeField] private WaveLogicManager lm;
 
     //Walk and Run Variables
     private float x;

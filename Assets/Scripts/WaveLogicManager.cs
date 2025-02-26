@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class LogicManager : MonoBehaviour
+public class WaveLogicManager : MonoBehaviour
 {
     public bool enemyIsAttacking = false; //Only lets one enemy attack at a time.
 

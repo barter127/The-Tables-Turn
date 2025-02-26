@@ -10,7 +10,7 @@ public class NEWpunkAI : MonoBehaviour
     private NEWComboSystem playerComboSystem;
     [SerializeField] private HealthBar healthManager; //Set in Unity.
     private GameObject manager;
-    private LogicManager lm;
+    private WaveLogicManager waveLogicManager;
     private Animator animator;
     [SerializeField] private BoxCollider boxColl;
 
@@ -38,13 +38,13 @@ public class NEWpunkAI : MonoBehaviour
     [SerializeField] private float minAttackTimerLength;
     [SerializeField] private float maxAttackTimerLength;
     [SerializeField] private float minAttackDistance; //How close AI gets before attacking.
-    private bool animationFarted = false;
+    private bool animationStarted = false;
 
     [SerializeField] private AttackScriptableObject basicAttack;
     [SerializeField] private AttackScriptableObject aerialAttack;
 
     //Health & collision
-    [SerializeField] int health = 0;
+    int health = 0;
     [SerializeField] private int maxHealth; //Health enemy starts with.
     public AttackScriptableObject playerCurrentAttack; //Stores attack data.
     public bool hasBeenHit = false; //Used in DamageNumbersController
@@ -85,7 +85,7 @@ public class NEWpunkAI : MonoBehaviour
         player = GameObject.Find("Sylvia");
         playerComboSystem = player.GetComponentInChildren<NEWComboSystem>();
         manager = GameObject.Find("LogicManager");
-        lm = manager.GetComponent<LogicManager>();
+        waveLogicManager = manager.GetComponent<WaveLogicManager>();
 
         attackTimer = Random.Range(0, 2 + maxAttackTimerLength);
         health = maxHealth;
@@ -125,15 +125,15 @@ public class NEWpunkAI : MonoBehaviour
 
         if (health <= 0) //NEED TO IMPLEMENT FALL DOWN THEN FADE AWAY
         {
-            LogicManager.alertEnemies--;
+            WaveLogicManager.alertEnemies--;
             Destroy(gameObject); //Destroy self if health = 0
         }
 
-        if (animationFarted) //Disables HB when not attacking to prevent unessecary collisions.
+        if (animationStarted) //Disables HB when not attacking to prevent unessecary collisions.
         {
             boxColl.enabled = true;
         }
-        else if (!animationFarted && boxColl.enabled == true)
+        else if (!animationStarted && boxColl.enabled == true)
         {
             boxColl.enabled = false;
         }
@@ -148,7 +148,7 @@ public class NEWpunkAI : MonoBehaviour
         if (distance < playerSpotDistance)
         {
             spotPlayer = true;
-            LogicManager.alertEnemies++;
+            WaveLogicManager.alertEnemies++;
             ChangeState(State.Move);
         }
     }
@@ -218,13 +218,13 @@ public class NEWpunkAI : MonoBehaviour
         rb.velocity = new Vector3(moveDirection.x * speed, rb.velocity.y, moveDirection.z * speed);
 
         #region Attack Timer
-        if (lm.enemyIsAttacking)
+        if (waveLogicManager.enemyIsAttacking)
             attackTimer = Random.Range(0, maxAttackTimerLength);
 
-        else if (attackTimer < 0 && !lm.enemyIsAttacking)
+        else if (attackTimer < 0 && !waveLogicManager.enemyIsAttacking)
         {
             ChangeState(State.Attack);
-            lm.enemyIsAttacking = true;
+            waveLogicManager.enemyIsAttacking = true;
         }
         else
             attackTimer -= Time.deltaTime;
@@ -250,9 +250,9 @@ public class NEWpunkAI : MonoBehaviour
             rb.velocity = Vector3.zero;
 
             //Peform Attack.
-            if (!animationFarted)
+            if (!animationStarted)
             {
-                animationFarted = true;
+                animationStarted = true;
 
                 animator.runtimeAnimatorController = basicAttack.animatorOV;
                 animator.Play("Attack State", 0, 0);
@@ -274,7 +274,7 @@ public class NEWpunkAI : MonoBehaviour
             if (playerCurrentAttack.canKnockdown) //If AttackScriptableObject marked as can knockdown.
             { 
                 playGetHitOnce = true;
-                animationFarted = false; //Fixes HB being on when onGround.
+                animationStarted = false; //Fixes HB being on when onGround.
                 animator.SetTrigger("StartFall"); //Start fall anim.
                 fallTimer = playerCurrentAttack.fallTimer; //Start timer to determine how long the fall lasts.
                 ChangeState(State.Fall);
@@ -364,8 +364,8 @@ public class NEWpunkAI : MonoBehaviour
     public void OnAttackAnimationEnd() //Called at the end of an attack animation.
     {
         ChangeState(State.Move);
-        animationFarted = false;
-        lm.enemyIsAttacking = false;
+        animationStarted = false;
+        waveLogicManager.enemyIsAttacking = false;
         attackTimer = Random.Range(minAttackTimerLength, maxAttackTimerLength);
         animator.SetBool("IsWalking", false);
     }
@@ -377,8 +377,8 @@ public class NEWpunkAI : MonoBehaviour
         hasBeenHit = false;
 
         //Set attack vars to incase hurt while in attack state.
-        animationFarted = false;
-        lm.enemyIsAttacking = false;
+        animationStarted = false;
+        waveLogicManager.enemyIsAttacking = false;
 
         Debug.Log("Hurt End");
     }
