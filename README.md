@@ -37,11 +37,7 @@
 
 
 ### Built With
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+  <img src="https://skillicons.dev/icons?i=cs,unity" />
 
 <!-- GETTING STARTED -->
 ## About The Project
@@ -50,13 +46,17 @@ The project was made in Unity 3D instead of Unity 2D as the original idea was to
 I would like to explore a similar idea with another project in the future.<br />
 
 To look at the source code, simply fork the repo and open the project with Unity 2022.3.4f1
-
+<p align="center">
 <a href="https://github.com/barter127/The-Tables-Turn">
-<img src="Tables Turn 3D Demonstration.png" alt="Logo" width="500" height="250">
+<img src="Tables Turn 3D Demo.png" alt="Logo" width="750" height="375">
     <br />
     <br />
+  </p>
+
+
+
 <!-- CONTACT -->
-## Contact
+### Contact
 
 Heather Carter - heathercarter2006@outlook.com
 
