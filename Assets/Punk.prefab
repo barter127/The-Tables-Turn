@@ -64,11 +64,9 @@ MonoBehaviour:
   maxAttackTimerLength: 9.5
   minAttackDistance: 0.35
   basicAttack: {fileID: 11400000, guid: 6e6beba108ccb724481b0e02c888d2c7, type: 2}
-  aerialAttack: {fileID: 0}
   maxHealth: 175
   playerCurrentAttack: {fileID: 0}
   hasBeenHit: 0
-  getUpTimer: 0
   getUpTimerLength: 3
   onGround: 0
   spotPlayer: 0
@@ -463,8 +461,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3908028157225471465}
   - component: {fileID: 9088826078813920956}
-  - component: {fileID: 3152318364651999490}
   - component: {fileID: 2293213697262198357}
+  - component: {fileID: 6763931678593315780}
   m_Layer: 3
   m_Name: Health Fill
   m_TagString: Untagged
@@ -500,36 +498,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5962168820856796831}
   m_CullTransparentMesh: 1
---- !u!114 &3152318364651999490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5962168820856796831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.18828177, g: 1, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &2293213697262198357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,7 +510,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bf7ebed89725b4fa12c800bc861370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthFill: {fileID: 3152318364651999490}
+  healthFill: {fileID: 6763931678593315780}
+--- !u!114 &6763931678593315780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962168820856796831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.0802089, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
+    type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6074890271672635451
 GameObject:
   m_ObjectHideFlags: 0

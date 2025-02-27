@@ -7,6 +7,8 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealth(float health, float maxHealth) //Remember can't divide ints into a decimal
     {
+        Debug.Log(health);
+
         healthFill.fillAmount = health / maxHealth; //Calculates health percentage.
     }
 }

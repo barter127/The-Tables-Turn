@@ -17,6 +17,6 @@ MonoBehaviour:
   animatorOV: {fileID: 22100000, guid: 949ba93fff11fd94c82fe29084081b43, type: 2}
   damage: 10
   enemyBlowbackHitDirection: {x: 0, y: 0, z: 1}
-  enemyBlowbackForce: 75
+  enemyBlowbackForce: 50
   canKnockdown: 0
   fallTimer: 0

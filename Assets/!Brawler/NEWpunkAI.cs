@@ -41,7 +41,6 @@ public class NEWpunkAI : MonoBehaviour
     private bool animationStarted = false;
 
     [SerializeField] private AttackScriptableObject basicAttack;
-    [SerializeField] private AttackScriptableObject aerialAttack;
 
     //Health & collision
     int health = 0;
@@ -50,7 +49,7 @@ public class NEWpunkAI : MonoBehaviour
     public bool hasBeenHit = false; //Used in DamageNumbersController
     private bool playGetHitOnce = false;
     private float fallTimer;
-    public float getUpTimer;
+    private float getUpTimer;
     [SerializeField] private float getUpTimerLength;
     [HideInInspector] public bool onGround;
     private float hurtTimer;
@@ -268,12 +267,14 @@ public class NEWpunkAI : MonoBehaviour
         if (!playGetHitOnce) //Allow attack code to trigger once per collision.
         {
             //Calculate health
-            health = health - playerCurrentAttack.damage;
+
+            health -= playerCurrentAttack.damage;
             healthManager.SetHealth(health, maxHealth);
+
+            playGetHitOnce = true;
 
             if (playerCurrentAttack.canKnockdown) //If AttackScriptableObject marked as can knockdown.
             { 
-                playGetHitOnce = true;
                 animationStarted = false; //Fixes HB being on when onGround.
                 animator.SetTrigger("StartFall"); //Start fall anim.
                 fallTimer = playerCurrentAttack.fallTimer; //Start timer to determine how long the fall lasts.
@@ -283,7 +284,6 @@ public class NEWpunkAI : MonoBehaviour
             }
             else
             {
-                playGetHitOnce = true;
                 animator.SetTrigger("GetHit");
 
                 StartCoroutine(ResetHit());
