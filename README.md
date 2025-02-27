@@ -39,7 +39,7 @@
 
 
 ### Built With
-  <img src="https://skillicons.dev/icons?i=cs,unity" />
+  <img src="https://skillicons.dev/icons?i=cs,unity,visualstudio,vscode" />
 
 <!-- GETTING STARTED -->
 ## About The Project
