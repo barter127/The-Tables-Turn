@@ -47,7 +47,7 @@
 The project was made in Unity 3D instead of Unity 2D as the original idea was to mix 3D models with 2D sprites but couldn't be done due to asset limitations and time constraints.<br />
 I would like to explore a similar idea with another project in the future.<br />
 
-To look at the source code, simply fork the repo and open the project with Unity 2022.3.4f1
+To look at the source code, simply clone the repo and open the project with Unity 2022.3.4f1
 <p align="center">
 <a href="https://github.com/barter127/The-Tables-Turn">
 <img src="Tables Turn 3D Demo.png" alt="Logo" width="750" height="375">
